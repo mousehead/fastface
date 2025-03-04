@@ -1,11 +1,11 @@
 import logging
 
-# from .gdrive import GoogleDriveAdapter
+from .gdrive import GoogleDriveAdapter
 from .http import HttpAdapter
 
 logger = logging.getLogger("fastface.adapter")
 
-__adapters__ = {"http": HttpAdapter}
+__adapters__ = {"gdrive": GoogleDriveAdapter, "http": HttpAdapter}
 
 
 def download_object(adapter: str, dest_path: str = None, **kwargs):
